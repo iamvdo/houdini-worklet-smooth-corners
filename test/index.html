@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <style>
+  html {
+    background: #111;
+  }
+  .a {
+    position: relative;
+    width: 256px;
+    height: 256px;
+    max-height: 80vw;
+    max-width: 80%;
+  }
+  .a {
+    margin: 50px auto;
+  }
+  .b {
+    width: 100%;
+    padding-top: 100%;
+    height: 0;
+    background: #fff;
+    border-radius: 70px;
+    position: absolute;
+    top: 0;
+  }
+  .c {
+    background: linear-gradient(to bottom right, deeppink, orangered);
+  }
+  @supports (-webkit-mask-image: paint(smooth-corners)) {
+    .c.is-loaded {
+      border-radius: 0;
+      -webkit-mask-image: paint(smooth-corners);
+      mask-image: paint(smooth-corners);
+      --smooth-corners: 4;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="a">
+    <div class="b" id="shallowEl"></div>
+    <div class="b c" id="el"></div>
+  </div>
+  <script>
+    if ('paintWorklet' in CSS) {
+      el.classList.add('is-loaded');
+      CSS.paintWorklet.addModule('../index.js');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "houdini-smooth-corners",
+  "version": "1.0.0",
+  "description": "CSS Houdini paint worklet to create smooth corners (superellipse)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamvdo/houdini-worklet-smooth-corners.git"
+  },
+  "keywords": [
+    "css",
+    "houdini",
+    "worklet"
+  ],
+  "author": "Vincent De Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamvdo/houdini-worklet-smooth-corners/issues"
+  },
+  "homepage": "https://github.com/iamvdo/houdini-worklet-smooth-corners#readme"
+}
